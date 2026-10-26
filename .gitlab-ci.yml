@@ -35,6 +35,8 @@ test:
   stage: test
   script:
     - uv run pytest tests/ -v
+  needs: lint
+
 
 # Train the model. Only runs when you click the `run` button in the interface.
 train:
